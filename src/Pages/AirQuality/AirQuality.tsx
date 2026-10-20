@@ -1,4 +1,4 @@
-import { MdAir, MdWbSunny, MdWaterDrop, MdCompress, MdVisibility, MdLocationOn } from 'react-icons/md'
+import { MdAir, MdWbSunny, MdWaterDrop, MdCompress, MdLocationOn } from 'react-icons/md'
 import { useGeolocation } from '../../Hooks/useGeolocation'
 import { useAirQuality } from '../../Hooks/useAirQuality'
 import './AirQuality.css'
