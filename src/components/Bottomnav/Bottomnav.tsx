@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import './BottomNav.css'
+import './Bottomnav.css'
 
 const tabs = [
   {
