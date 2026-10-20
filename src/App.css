@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #2E7D32;
+  --color-primary-light: #4CAF50;
+  --color-blue-dark: #1565C0;
+  --color-blue-darker: #0D47A1;
+  --color-danger: #C62828;
+  --color-warning: #F9A825;
+  --color-bg: #F0F4F8;
+  --color-white: #FFFFFF;
+  --color-text: #1A1A2E;
+  --color-text-muted: #6B7280;
+  --header-height: 60px;
+  --bottomnav-height: 64px;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  background-color: var(--color-bg);
+  overflow-x: hidden; /* Trava qualquer vazamento de largura */
+}
+
+.app-content {
+  flex: 1;
+  padding-top: var(--header-height);
+  padding-bottom: var(--bottomnav-height);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+}

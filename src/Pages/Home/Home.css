@@ -1,0 +1,299 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* ── Card Base ── */
+.card {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:active {
+  transform: scale(0.995);
+}
+
+.card--blue {
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+  color: #FFFFFF;
+}
+
+.card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: -0.2px;
+}
+
+.card__title--white {
+  color: #FFFFFF;
+}
+
+/* ── Qualidade do Ar ── */
+.aqi-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.aqi-badge {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.aqi-badge__label {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.aqi-badge__sub {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1;
+}
+
+.aqi-temp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-bg);
+  padding: 10px 16px;
+  border-radius: 14px;
+}
+
+.aqi-temp__value {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.aqi-temp__icon {
+  filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
+}
+
+.aqi-description {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* ── Ônibus Favoritos ── */
+.bus-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bus-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bus-item__icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bus-item__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.bus-item__code {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.bus-item__destination {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bus-item__eta-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.bus-item__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* ── Alertas de Alagamento ── */
+.flood-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+}
+
+.flood-header__icon {
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+.alert-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 12px 8px 4px;
+}
+
+.alert-box__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-box__icon--safe {
+  color: #2E7D32;
+  filter: drop-shadow(0 2px 6px rgba(46, 125, 50, 0.2));
+}
+
+.alert-box__icon--warning {
+  color: #F59E0B;
+  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.2));
+}
+
+.alert-box__icon--danger {
+  color: #C62828;
+  filter: drop-shadow(0 2px 6px rgba(198, 40, 40, 0.2));
+}
+
+.alert-box__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.alert-box__title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.alert-box__text {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.alert-box__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed #E5E7EB;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* ── Skeletons ── */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 12px;
+}
+
+.skeleton-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 8px 0;
+}
+
+.skeleton--circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+
+.skeleton--temp {
+  width: 100px;
+  height: 52px;
+}
+
+.skeleton--bus {
+  height: 48px;
+  width: 100%;
+}
+
+.skeleton--alert {
+  width: 100%;
+  height: 80px;
+}
+
+.card__error {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 8px 0;
+}

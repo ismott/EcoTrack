@@ -1,0 +1,185 @@
+.air-page {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.air-page__header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-primary);
+}
+
+.air-page__header h2 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* ── Banner Principal ── */
+.air-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.air-banner__badge {
+    width: 76px;
+    height: 76px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.air-banner__iq-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.air-banner__iq-max {
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.air-banner__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.air-banner__status {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.air-banner__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.air-banner__desc {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    line-height: 1.35;
+}
+
+/* ── Métricas ── */
+.section-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.section-subtitle {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin-bottom: 14px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.metric-item {
+    background-color: var(--color-bg);
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.metric-item__label {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+}
+
+.metric-item__value {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* ── Poluentes ── */
+.pollutants-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.pollutant-card {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pollutant-card__code {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.pollutant-card__name {
+    font-size: 0.68rem;
+    color: var(--color-text-muted);
+}
+
+.pollutant-card__value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 4px;
+}
+
+/* ── Loading Skeletons ── */
+.air-page__loading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skeleton--banner {
+    height: 110px;
+    width: 100%;
+}
+
+.skeleton--grid {
+    height: 180px;
+    width: 100%;
+}
+
+.air-page__error {
+    text-align: center;
+    color: var(--color-danger);
+    padding: 24px 16px;
+}
+
+.air-page__error small {
+    display: block;
+    margin-top: 8px;
+    color: var(--color-text-muted);
+}
