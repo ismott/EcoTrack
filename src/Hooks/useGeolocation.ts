@@ -12,18 +12,17 @@ interface GeolocationState {
 }
 
 export function useGeolocation(): GeolocationState {
+  const isSupported = 'geolocation' in navigator
   const [coords, setCoords] = useState<Coords | null>(null)
-  const [error, setError] = useState<string | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(
+    isSupported ? null : 'Geolocalização não suportada neste navegador.'
+  )
+  const [loading, setLoading] = useState<boolean>(isSupported)
 
   useEffect(() => {
-    if (!navigator.geolocation) {
-      setError('Geolocalização não suportada neste navegador.')
-      setLoading(false)
-      return
-    }
+    if (!isSupported) return
 
-    const watcher = navigator.geolocation.watchPosition(
+    navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
         setCoords({ lat: latitude, lon: longitude })
         setLoading(false)
@@ -34,8 +33,6 @@ export function useGeolocation(): GeolocationState {
       },
       { enableHighAccuracy: true, maximumAge: 10000, timeout: 15000 },
     )
-
-    return () => navigator.geolocation.clearWatch(watcher)
   }, [])
 
   return { coords, error, loading }
